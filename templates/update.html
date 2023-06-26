@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+
+<div class="main">
+    <!-- Create a Form -->
+    <form method="POST">
+        <!-- Security token by Django -->
+        {% csrf_token %}
+
+    <h4>    Do you want to Update this item ? </h4><br>
+<div>
+     <table style="width:100%"; border-spacing: 5px;>
+
+        
+              <tr>
+                <th>Roll.No</th>
+                <th >Name</th>
+                <th >Department</th>
+                <th >Phone number</th>
+                <th >Address</th>
+                
+              </tr>
+                    
+            <tr>
+                <td>{{ data.id }}</td>
+                <td>{{ data.name }}</td>
+                <td>{{ data.department }}</td>
+                <td>{{ data.contact }}</td>
+                <td>{{ data.address }}</td>
+                
+
+            </tr>
+        
+    </table> <br><br>
+    <div>
+		<h1>Enter the values to be updated here.</h1>
+    			{{ form.as_p }}
+    </div>
+
+        <input type="submit" value="Yes, Update" />
+        <a href="/">Cancel </a>
+    </form>
+</div>
+
+
+
+{% endblock %}

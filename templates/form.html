@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+    Today we are going to discuss on FBV - Function based views.
+</h1>
+<div>
+    <table style="width:100%"; border-spacing: 5px;>
+
+             <tr>
+                <th>Roll.no</th>
+               <th>Name</th>
+               <th >Age</th>
+               <th >Gender</th>
+               <th >Department</th>               
+             </tr>
+                     {% for a in stu %}
+           <tr>
+               <td>{{ a.id }} </td>
+               <td>{{ a.name }}</td>
+               <td>{{ a.age }}</td>
+               <td>{{ a.gender }}</td>
+               <td>{{ a.department }}</td>              
+
+           </tr>
+       {% endfor %}
+   </table> 
+<hr><hr>
+<br><br>
+
+
+For registration please fill in the form.
+
+<div>
+    <form action = "" method = "post">
+        {% csrf_token %}
+        {{form.as_p }}
+        <input type="submit" value= "Submit">
+    </form>
+</div>
+
+
+
+
+{% endblock %}

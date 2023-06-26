@@ -1,0 +1,23 @@
+<h1>We are discussing about GET and POST requests.</h1>
+
+
+
+GET request:
+<form action = 'get1'>
+    Enter the first number:<input type = 'text' name='num1'><br><br>
+    Enter the second number:<input type = 'text' name='num2'><br><br>
+    <input type = 'submit'>
+
+
+</form>
+
+POST request:
+
+<form action = 'post1' method = 'post'>
+    {% csrf_token %}
+    Enter the first number:<input type = 'text' name='num1'><br><br>
+    Enter the second number:<input type = 'text' name='num2'><br><br>
+    <input type = 'submit'>
+
+
+</form>

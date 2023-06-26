@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>FIRST HOME.<br>
+name:{{name_1}}
+names:
+{% for i in names %} 
+{{i}} <br><hr> 
+{% endfor %} 
+Student name in the database.<br> 
+
+{% for i in Students %}
+
+name:{{i.name}},<br>
+reg number:{{i.regnumber}}<br>
+age:{{i.age}}<hr>
+{% endfor %}
+</h1>
+
+{% endblock %}
